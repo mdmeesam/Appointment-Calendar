@@ -56,7 +56,7 @@ namespace Calendar
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(870, 51);
+            this.panel1.Size = new System.Drawing.Size(1015, 51);
             this.panel1.TabIndex = 0;
             // 
             // date
@@ -75,7 +75,7 @@ namespace Calendar
             this.panel2.Controls.Add(this.btnNextMonth);
             this.panel2.Controls.Add(this.btnPrevMonth);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(720, 0);
+            this.panel2.Location = new System.Drawing.Point(865, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 51);
             this.panel2.TabIndex = 1;
@@ -122,7 +122,7 @@ namespace Calendar
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 51);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(870, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1015, 38);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -195,9 +195,9 @@ namespace Calendar
             // 
             this.label7.BackColor = System.Drawing.Color.LightCoral;
             this.label7.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 38);
+            this.label7.Location = new System.Drawing.Point(873, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 38);
+            this.label7.Size = new System.Drawing.Size(139, 38);
             this.label7.TabIndex = 6;
             this.label7.Text = "Saturday";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,14 +208,14 @@ namespace Calendar
             this.flDays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flDays.Location = new System.Drawing.Point(0, 89);
             this.flDays.Name = "flDays";
-            this.flDays.Size = new System.Drawing.Size(870, 514);
+            this.flDays.Size = new System.Drawing.Size(1015, 514);
             this.flDays.TabIndex = 2;
             // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 603);
+            this.ClientSize = new System.Drawing.Size(1015, 603);
             this.Controls.Add(this.flDays);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
