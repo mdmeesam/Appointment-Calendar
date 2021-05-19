@@ -32,13 +32,22 @@ namespace Calendar
             //string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\Database.mdf; Integrated Security = True";
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\host 1\Documents\Projects\Calendar\Calendar\Database.mdf; Integrated Security = True";
 
-            SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand(query, con);
-            con.Open();
-            int i = cmd.ExecuteNonQuery();
-            //bool i = Convert.ToBoolean(cmd.ExecuteNonQuery());
-
-            return i;
+            try 
+            { 
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+                //bool i = Convert.ToBoolean(cmd.ExecuteNonQuery());
+                return i;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Failed to execute:" + e.Message);
+                Console.WriteLine(e.Message);
+                return 0;
+            }
+            //return i;
         }
 
         private bool IsConfirm(String question)
@@ -58,15 +67,10 @@ namespace Calendar
                 String name = txtCustomer.Text;
                 string address = txtAddress.Text;
                 string comment = txtComment.Text;
-                //DateTime time = dtpDate.Value;
                 string time = dtpDate.Value.ToShortDateString();
-                //Console.Out.WriteLine(tme+"  and in time format  "+time);
-
-
-
+                
                 //This was test query before complexity
                 //String query = "INSERT INTO Appointments (AppDate, ContactName, Address, Comment) VALUES ('" + time + "','" + name + "','" + address + "','" + comment + "')";
-
 
                 //Setting the query below
                 if (AppID == 0)
@@ -99,19 +103,6 @@ namespace Calendar
                         MessageBox.Show("Update Failed");
                     }
                 }
-                
-
-
-                //Setting the command
-                /*SqlCommand cmd = new SqlCommand(query, con);
-
-                con.Open();
-                int i = cmd.ExecuteNonQuery();
-
-                if (i > 0)
-                    MessageBox.Show("Data has been Inserted");
-                else if (i == 0)
-                    MessageBox.Show("Not successful");*/
             }
         }
 
